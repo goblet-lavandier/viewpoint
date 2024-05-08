@@ -145,9 +145,10 @@ module Viewpoint::EWS::Types
       rmsg = resp.response_messages[0]
 
       if rmsg.success?
-        obj = rmsg.items.first
-        itype = obj.keys.first
-        obj[itype][:elems][0][:item_id][:attribs][:id]
+        # obj = rmsg.items.first
+        # itype = obj.keys.first
+        # obj[itype][:elems][0][:item_id][:attribs][:id]
+        true
       else
         raise EwsError, "Could not move item. #{resp.code}: #{resp.message}"
       end
@@ -167,9 +168,10 @@ module Viewpoint::EWS::Types
       rmsg = resp.response_messages[0]
 
       if rmsg.success?
-        obj = rmsg.items.first
-        itype = obj.keys.first
-        obj[itype][:elems][0][:item_id][:attribs][:id]
+        # obj = rmsg.items.first
+        # itype = obj.keys.first
+        # obj[itype][:elems][0][:item_id][:attribs][:id]
+        true
       else
         raise EwsError, "Could not copy item. #{rmsg.response_code}: #{rmsg.message_text}"
       end
